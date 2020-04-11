@@ -316,12 +316,12 @@ body {
         text-decoration: underline;
       }
 
-      #title {
+      .title {
         color: $dark-grayish-violet;
         margin-bottom: 30px;
       }
 
-      #title:hover {
+      .title:hover {
         cursor: default;
         text-decoration: none;
       }

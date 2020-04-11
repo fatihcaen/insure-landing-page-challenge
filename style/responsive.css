@@ -263,11 +263,11 @@ body {
 .footer .links .first h5:hover {
   text-decoration: underline;
 }
-.footer .links .first #title {
+.footer .links .first .title {
   color: #837d87;
   margin-bottom: 30px;
 }
-.footer .links .first #title:hover {
+.footer .links .first .title:hover {
   cursor: default;
   text-decoration: none;
 }
@@ -433,7 +433,7 @@ body {
     margin: 0;
     text-align: center;
   }
-  .footer .links #title {
+  .footer .links .title {
     margin-top: 25px;
   }
 }
