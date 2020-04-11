@@ -1,63 +1,251 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
-.navbar, .navbar .nav-items {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.footer .links, .footer .socialLogos, .footer .footerSocial, .howWeWorkSection, .featuresSection .cards, .introSection, .navbar .nav-items, .navbar {
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row;
-          flex-flow: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-flow: row;
+}
+
+.footer, .featuresSection .cards .card, .featuresSection, .introSection .leftSection .headingDesc, .introSection .leftSection {
+  display: flex;
+  flex-flow: column;
+}
+
+button:focus,
+button:active {
+  border: none;
+  outline: none;
+  box-shadow: none;
 }
 
 body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: "Karla", sans-serif;
 }
 
 .navbar {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   max-width: 100%;
-  padding: 10px;
+  padding: 10px 100px;
 }
-
 .navbar .nav-items {
-  width: 30%;
+  justify-content: space-around;
+  width: 40%;
   margin: 0;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 .navbar .nav-items .nav-link {
   color: #837d87;
   list-style: none;
   font-size: 13px;
   font-weight: 700;
   cursor: pointer;
-  -webkit-transition: color 0.4s ease;
   transition: color 0.4s ease;
 }
-
 .navbar .nav-items .nav-link:hover {
   color: #2b272f;
 }
-
 .navbar .nav-items #viewPlans {
   color: #2b272f;
   border: 2px solid #2b272f;
   padding: 8px 20px;
-  -webkit-transition: background-color 0.4s ease;
   transition: background-color 0.4s ease;
-  -webkit-transition: color 0.4s ease;
   transition: color 0.4s ease;
 }
-
 .navbar .nav-items #viewPlans:hover {
   background-color: #2b272f;
   color: #fff;
 }
+
+.introSection {
+  background: url(../images/bg-pattern-intro-right-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: #2d2640;
+  padding: 75px 120px;
+  justify-content: space-between;
+  height: 325px;
+}
+.introSection .leftShape {
+  position: absolute;
+  left: 0;
+  top: 400px;
+  width: 175px;
+}
+.introSection .leftShape img {
+  max-width: 100%;
+  height: auto;
+}
+.introSection .leftSection {
+  width: 50%;
+  height: 325px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.introSection .leftSection .line {
+  width: 120px;
+  border-top: 1px solid #fff;
+}
+.introSection .leftSection .headingDesc h1 {
+  font-family: "DM Serif Display", serif;
+  color: #fff;
+  font-size: 70px;
+  font-weight: 400;
+  margin: 0;
+  line-height: 0.8;
+}
+.introSection .leftSection .headingDesc h6 {
+  color: #fff;
+  font-weight: 400;
+  line-height: 1.6;
+  font-size: 15px;
+}
+.introSection .leftSection .headingDesc .viewPlans {
+  background: transparent;
+  padding: 8px 20px;
+  color: #fff;
+  border: 1px solid #fff;
+  font-family: "Karla", sans-serif;
+  align-self: flex-start;
+  font-weight: 700;
+  transition: background-color 0.4s ease;
+  transition: color 0.4s ease;
+  cursor: pointer;
+}
+.introSection .leftSection .headingDesc .viewPlans:hover {
+  background-color: #fff;
+  color: #2d2640;
+}
+.introSection .pic {
+  width: 41%;
+}
+.introSection .pic img {
+  max-width: 100%;
+  height: auto;
+}
+
+.featuresSection {
+  height: 475px;
+  justify-content: space-around;
+  padding: 275px 120px 100px 120px;
+}
+.featuresSection .line {
+  width: 120px;
+  border-top: 1px solid #837d87;
+}
+.featuresSection .heading {
+  font-family: "DM Serif Display", serif;
+  font-size: 70px;
+  font-weight: 400;
+  margin: 0;
+}
+.featuresSection .cards {
+  justify-content: space-between;
+}
+.featuresSection .cards .card {
+  justify-content: space-around;
+  height: 225px;
+  width: 325px;
+}
+.featuresSection .cards .card h2 {
+  font-size: 25px;
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+.featuresSection .cards .card p {
+  color: #837d87;
+  font-size: 14px;
+}
+
+.howWeWorkSection {
+  background: url(../images/bg-pattern-how-we-work-desktop.svg);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-color: #2d2640;
+  margin: 0px 120px 120px 120px;
+  height: 225px;
+  padding: 0px 75px;
+  justify-content: space-between;
+  align-items: center;
+}
+.howWeWorkSection h1 {
+  font-weight: 400;
+  width: 50%;
+  font-size: 50px;
+  color: #fff;
+  font-family: "DM Serif Display", serif;
+}
+.howWeWorkSection button {
+  background: transparent;
+  padding: 8px 20px;
+  color: #fff;
+  border: 1px solid #fff;
+  font-family: "Karla", sans-serif;
+  font-weight: 700;
+  transition: background-color 0.4s ease;
+  transition: color 0.4s ease;
+  cursor: pointer;
+}
+.howWeWorkSection button:hover {
+  background-color: #fff;
+  color: #2d2640;
+}
+
+.footer {
+  background: url(../images/bg-pattern-footer-desktop.svg);
+  background-repeat: no-repeat;
+  background-color: #fafafa;
+  height: 275px;
+  justify-content: space-around;
+  padding: 50px 120px;
+}
+.footer .footerSocial {
+  justify-content: space-between;
+}
+.footer .socialLogos {
+  justify-content: space-between;
+  align-items: center;
+  width: 12%;
+}
+.footer .socialLogos i {
+  font-size: 25px;
+  color: #837d87;
+  transition: color 0.4s ease;
+  cursor: pointer;
+}
+.footer .socialLogos i:hover {
+  color: #2d2640;
+}
+.footer .line {
+  width: 100%;
+  border-top: 1px solid #837d87;
+  opacity: 0.3;
+  margin: 25px 0px;
+}
+.footer .links {
+  justify-content: space-between;
+  width: 85%;
+}
+.footer .links .first h5 {
+  color: #2b272f;
+  margin-top: 15px;
+  margin-bottom: 0;
+  font-weight: 700;
+  cursor: pointer;
+}
+.footer .links .first h5:hover {
+  text-decoration: underline;
+}
+.footer .links .first #title {
+  color: #837d87;
+  margin-bottom: 30px;
+}
+.footer .links .first #title:hover {
+  cursor: default;
+  text-decoration: none;
+}
+
 /*# sourceMappingURL=style.css.map */

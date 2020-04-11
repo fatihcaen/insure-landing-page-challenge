@@ -14,25 +14,45 @@ $very-dark-violet: #2b272f;
 $dark-grayish-violet: #837d87;
 $very-light-gray: #fafafa;
 
-%dFlexRowSpaceAround {
+// Flex styles
+
+%dFlexRow {
   display: flex;
   flex-flow: row;
-  justify-content: space-around;
+}
+
+%dFlexColumn {
+  display: flex;
+  flex-flow: column;
+}
+
+// Main
+
+button:focus,
+button:active {
+  border: none;
+  outline: none;
+  box-shadow: none;
 }
 
 body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: $body-font;
 }
 
 .navbar {
-  @extend %dFlexRowSpaceAround;
+  @extend %dFlexRow;
+  justify-content: space-between;
   align-items: center;
   max-width: 100%;
-  padding: 10px;
+  padding: 10px 100px;
 
   .nav-items {
-    @extend %dFlexRowSpaceAround;
-    width: 30%;
+    @extend %dFlexRow;
+    justify-content: space-around;
+    width: 40%;
     margin: 0;
     align-items: center;
 
@@ -60,6 +80,241 @@ body {
     #viewPlans:hover {
       background-color: $very-dark-violet;
       color: $white;
+    }
+  }
+}
+
+.introSection {
+  background: url(../images/bg-pattern-intro-right-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: $dark-violet;
+  padding: 75px 120px;
+  @extend %dFlexRow;
+  justify-content: space-between;
+  height: 325px;
+
+  .leftShape {
+    position: absolute;
+    left: 0;
+    top: 400px;
+    width: 175px;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  .leftSection {
+    width: 50%;
+    height: 325px;
+    @extend %dFlexColumn;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .line {
+      width: 120px;
+      border-top: 1px solid $white;
+    }
+
+    .headingDesc {
+      @extend %dFlexColumn;
+
+      h1 {
+        font-family: $headings-font;
+        color: $white;
+        font-size: 70px;
+        font-weight: 400;
+        margin: 0;
+        line-height: 0.8;
+      }
+
+      h6 {
+        color: $white;
+        font-weight: 400;
+        line-height: 1.6;
+        font-size: 15px;
+      }
+
+      .viewPlans {
+        background: transparent;
+        padding: 8px 20px;
+        color: $white;
+        border: 1px solid $white;
+        font-family: $body-font;
+        align-self: flex-start;
+        font-weight: 700;
+        transition: background-color 0.4s ease;
+        transition: color 0.4s ease;
+        cursor: pointer;
+      }
+
+      .viewPlans:hover {
+        background-color: $white;
+        color: $dark-violet;
+      }
+    }
+  }
+
+  .pic {
+    width: 41%;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.featuresSection {
+  height: 475px;
+  @extend %dFlexColumn;
+  justify-content: space-around;
+  padding: 275px 120px 100px 120px;
+
+  .line {
+    width: 120px;
+    border-top: 1px solid $dark-grayish-violet;
+  }
+
+  .heading {
+    font-family: $headings-font;
+    font-size: 70px;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  .cards {
+    @extend %dFlexRow;
+    justify-content: space-between;
+
+    .card {
+      @extend %dFlexColumn;
+      justify-content: space-around;
+      height: 225px;
+      width: 325px;
+
+      h2 {
+        font-size: 25px;
+        font-family: $headings-font;
+        font-weight: 400;
+        margin-bottom: 0;
+      }
+
+      p {
+        color: $dark-grayish-violet;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.howWeWorkSection {
+  background: url(../images/bg-pattern-how-we-work-desktop.svg);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-color: $dark-violet;
+  margin: 0px 120px 120px 120px;
+  height: 225px;
+  padding: 0px 75px;
+  @extend %dFlexRow;
+  justify-content: space-between;
+  align-items: center;
+
+  h1 {
+    font-weight: 400;
+    width: 50%;
+    font-size: 50px;
+    color: $white;
+    font-family: $headings-font;
+  }
+
+  button {
+    background: transparent;
+    padding: 8px 20px;
+    color: $white;
+    border: 1px solid $white;
+    font-family: $body-font;
+    font-weight: 700;
+    transition: background-color 0.4s ease;
+    transition: color 0.4s ease;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: $white;
+    color: $dark-violet;
+  }
+}
+
+.footer {
+  background: url(../images/bg-pattern-footer-desktop.svg);
+  background-repeat: no-repeat;
+  background-color: $very-light-gray;
+
+  @extend %dFlexColumn;
+  height: 275px;
+  justify-content: space-around;
+  padding: 50px 120px;
+
+  .footerSocial {
+    @extend %dFlexRow;
+    justify-content: space-between;
+  }
+
+  .socialLogos {
+    @extend %dFlexRow;
+    justify-content: space-between;
+    align-items: center;
+    width: 12%;
+
+    i {
+      font-size: 25px;
+      color: $dark-grayish-violet;
+      transition: color 0.4s ease;
+      cursor: pointer;
+    }
+
+    i:hover {
+      color: $dark-violet;
+    }
+  }
+
+  .line {
+    width: 100%;
+    border-top: 1px solid $dark-grayish-violet;
+    opacity: 0.3;
+    margin: 25px 0px;
+  }
+
+  .links {
+    @extend %dFlexRow;
+    justify-content: space-between;
+    width: 85%;
+
+    .first {
+      h5 {
+        color: $very-dark-violet;
+        margin-top: 15px;
+        margin-bottom: 0;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      h5:hover {
+        text-decoration: underline;
+      }
+
+      #title {
+        color: $dark-grayish-violet;
+        margin-bottom: 30px;
+      }
+
+      #title:hover {
+        cursor: default;
+        text-decoration: none;
+      }
     }
   }
 }
