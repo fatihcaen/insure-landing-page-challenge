@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+$headings-font: "DM Serif Display", serif;
+$body-font: "Karla", sans-serif;
+
+// Primary
+$dark-violet: #2d2640;
+$grayish-blue: #95a9c6;
+$white: #fff;
+
+// Neutral
+$very-dark-violet: #2b272f;
+$dark-grayish-violet: #837d87;
+$very-light-gray: #fafafa;
+
+%dFlexRowSpaceAround {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+}
+
+body {
+  font-family: $body-font;
+}
+
+.navbar {
+  @extend %dFlexRowSpaceAround;
+  align-items: center;
+  max-width: 100%;
+  padding: 10px;
+
+  .nav-items {
+    @extend %dFlexRowSpaceAround;
+    width: 30%;
+    margin: 0;
+    align-items: center;
+
+    .nav-link {
+      color: $dark-grayish-violet;
+      list-style: none;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: color 0.4s ease;
+    }
+
+    .nav-link:hover {
+      color: $very-dark-violet;
+    }
+
+    #viewPlans {
+      color: $very-dark-violet;
+      border: 2px solid $very-dark-violet;
+      padding: 8px 20px;
+      transition: background-color 0.4s ease;
+      transition: color 0.4s ease;
+    }
+
+    #viewPlans:hover {
+      background-color: $very-dark-violet;
+      color: $white;
+    }
+  }
+}
