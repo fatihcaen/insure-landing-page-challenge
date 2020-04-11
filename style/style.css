@@ -272,4 +272,19 @@ body {
   text-decoration: none;
 }
 
+.attribution {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+  color: #2d2640;
+}
+.attribution a {
+  color: blue;
+  text-decoration: none;
+}
+.attribution a:hover {
+  text-decoration: underline;
+}
+
 /*# sourceMappingURL=style.css.map */

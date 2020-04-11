@@ -328,3 +328,20 @@ body {
     }
   }
 }
+
+.attribution {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+  color: $dark-violet;
+
+  a {
+    color: blue;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}

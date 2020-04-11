@@ -272,6 +272,21 @@ body {
   text-decoration: none;
 }
 
+.attribution {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+  color: #2d2640;
+}
+.attribution a {
+  color: blue;
+  text-decoration: none;
+}
+.attribution a:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 375px) {
   .navbar {
     max-width: 100%;
@@ -435,6 +450,23 @@ body {
   }
   .footer .links .title {
     margin-top: 25px;
+  }
+
+  .attribution {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    height: 50px;
+    color: #2d2640;
+  }
+  .attribution a {
+    color: blue;
+    text-decoration: none;
+  }
+  .attribution a:hover {
+    text-decoration: underline;
   }
 }
 
