@@ -4,6 +4,8 @@ This is the insure landing page front-end challenge by frontendmenter.io. Coded 
 
 You can access the challenge from <a href="https://www.frontendmentor.io/challenges/insure-landing-page-uTU68JV8">this link</a>
 
+You can access the website from <a href="https://insure-landing-page-challenge.fatihcaen.now.sh/">this link</a>
+
 The designs were created to the following widths:
 
 - Mobile: 375px
