@@ -7,9 +7,8 @@ You can access the challenge from <a href="https://www.frontendmentor.io/challen
 # Used technologies
 
 - HTML
-- SCSS
+- Sass / SCSS / CSS
 - JS/jQuery
 - VS Code
-- <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass" target="_blank">Live SCSS Compiler</a> (VS Code extension)
-- <a href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode" target="_blank">Prettier</a> (VS Code extension)
-- <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" target="_blank">Live Server</a> (VS Code extension. That allows you to see the changes realtime when you save.)
+- <a href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode" target="_blank">Prettier</a> (VS Code extension. Formats the code so you read it easily.)
+- <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" target="_blank">Live Server</a> (VS Code extension. That allows you to see the changes realtime everytime you save the code.)

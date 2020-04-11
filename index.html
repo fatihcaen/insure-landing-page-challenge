@@ -7,6 +7,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     <script src="https://kit.fontawesome.com/973e1e5e78.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/responsive.css">
     <title>Frontend Mentor | Insure Landing Page Challenge</title>
 </head>
 
@@ -16,12 +17,15 @@
         <div class="nav-brand">
             <img src="images/logo.svg" alt="">
         </div>
-        <ul class="nav-items">
+        <ul class="nav-items" id="navItems">
             <li class="nav-link">HOW WE WORK</li>
             <li class="nav-link">BLOG</li>
             <li class="nav-link">ACCOUNT</li>
             <li class="nav-link" id="viewPlans">VIEW PLANS</li>
         </ul>
+        <span class="menuToggleIcon" id="menuToggleIcon">
+            <img src="images/icon-hamburger.svg" alt="">
+        </span>
     </nav>
 
     <div class="container">
@@ -44,6 +48,9 @@
             </div>
             <div class="pic">
                 <img src="images/image-intro-desktop.jpg" alt="">
+            </div>
+            <div class="rightShape">
+                <img src="images/bg-pattern-intro-right-mobile.svg" alt="">
             </div>
         </div>
 
@@ -141,6 +148,8 @@
         </div>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/nav_toggle.js"></script>
 </body>
 
 </html>
